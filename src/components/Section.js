@@ -1,18 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Fade } from "react-awesome-reveal";
 
 function Section(props) {
     return (
         <Container bgImage={ props.backgroundImg }>
-            <ItemText>
-                <h1>{ props.title }</h1>
-                <p>{ props.description }</p>
-            </ItemText>
-            <ButtonGroup>
-                <LeftButton>{ props.leftBtnText }</LeftButton>
-                <RightButton>{ props.rightBtnText }</RightButton>
-            </ButtonGroup>
-            <DownArrow src="/images/down-arrow.svg"></DownArrow>
+            <Fade bottom>
+                <ItemText>
+                    <h1>{ props.title }</h1>
+                    <p>{ props.description }</p>
+                </ItemText>
+            </Fade>
+
+            <Buttons>
+                <Fade bottom>
+                    <ButtonGroup>
+                        <LeftButton>{ props.leftBtnText }</LeftButton>
+                        { props.rightBtnText &&
+                            <RightButton>{ props.rightBtnText }</RightButton>
+                        }
+                        
+                    </ButtonGroup>
+                </Fade>
+                <DownArrow src="/images/down-arrow.svg"></DownArrow>
+            </Buttons>
+                
+            
         </Container>
     )
 }
@@ -29,7 +42,8 @@ const Container = styled.div`
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
+    justify-content: space-between; 
     
     
 `
@@ -40,6 +54,7 @@ const ItemText = styled.div`
     flex-grow: 1;
 
 `
+
 
 const ButtonGroup = styled.div`
     display: flex;
@@ -77,6 +92,7 @@ const RightButton = styled(LeftButton)`
 const DownArrow = styled.img`
     height: 40px;
     animation: animateDown infinite 1.5s;
-    margin-bottom: 50px;
+    overflow-x: hidden;
 `
 
+const Buttons = styled.div``
