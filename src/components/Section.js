@@ -22,7 +22,7 @@ function Section(props) {
                         
                     </ButtonGroup>
                 </Fade>
-                <DownArrow src="/images/down-arrow.svg"></DownArrow>
+                <DownArrow src={`${process.env.PUBLIC_URL}/images/down-arrow.svg`}></DownArrow>
             </Buttons>
                 
             
@@ -36,7 +36,7 @@ const Container = styled.div`
    
     width: 100vw;
     height: 100vh;
-    background-image: ${props => `url("/images/${props.bgImage}")`};
+    background-image: ${props => `url("${process.env.PUBLIC_URL}/images/${props.bgImage}")`};
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
