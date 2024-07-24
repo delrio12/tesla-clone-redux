@@ -1,3 +1,6 @@
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/portfolio-svelte-3d3e0.appspot.com/o/GitHub%20Storage%2Ftesla-clone%2Ftwitter-clone-1.jpg?alt=media&token=b154c8b5-7883-4c35-a8c6-4d2aa9dde5ee)
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
